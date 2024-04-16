@@ -7,70 +7,85 @@
     <groupId>com.wsmasico</groupId>
     <artifactId>app</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
-<dependencies>
-    <!-- Apache POI para leer archivos Excel -->
-    <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi-ooxml</artifactId>
-        <version>5.2.2</version>
-    </dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-chrome-driver</artifactId>
-    <version>4.19.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-support</artifactId>
-    <version>4.19.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v85 -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-devtools-v85</artifactId>
-    <version>4.19.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v86 -->
-<!-- <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-devtools-v86</artifactId>
-    <version>4.0.0-beta-2</version>
-</dependency> -->
- <!-- Log4j2 API -->
-</dependencies>
- <dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.17.2</version> <!-- Actualiza aquí a la última versión disponible -->
+            <artifactId>log4j-core</artifactId>
+            <version>2.19.0</version>
         </dependency>
+
+        <!-- Apache POI para leer archivos Excel -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.2</version>
+        </dependency>
+
+  <!-- Selenium Java bindings -->
+        <!-- <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.8.1</version>  
+              <exclusions>
+        <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </exclusion>
+    </exclusions>
+        </dependency> -->
+
+  <!-- Agregar esta dependencia para usar Log4j como implementación de SLF4J -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.17.2</version> <!-- Actualiza aquí a la última versión disponible -->
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.19.0</version>
         </dependency>
+
+        <!-- WebDriver Manager para gestionar el driver de Chrome automáticamente -->
+    
+
+ 
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.19.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>4.19.1</version>
+        </dependency>
+
+ 
     </dependencies>
-</dependencyManagement>
 
-
-
-<build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Usa la última versión compatible -->
+                <version>3.8.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <finalName>wsmasimo</finalName>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,0 +1,7 @@
+2024/04/16-02:19:53.529 2b8 Reusing MANIFEST C:\Users\Miguel\Desktop\wsMasivo\app\data\Default\Local Storage\leveldb/MANIFEST-000001
+2024/04/16-02:19:53.534 2b8 Recovering log #3
+2024/04/16-02:19:53.538 2b8 Level-0 table #3: started
+2024/04/16-02:19:53.551 2b8 Level-0 table #3: 26800 bytes OK
+2024/04/16-02:19:53.551 2b8 Recovering log #4
+2024/04/16-02:19:53.557 2b8 Reusing old log C:\Users\Miguel\Desktop\wsMasivo\app\data\Default\Local Storage\leveldb/000004.log 
+2024/04/16-02:19:53.561 2b8 Delete type=0 #3

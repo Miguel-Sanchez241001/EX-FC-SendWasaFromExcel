@@ -1,0 +1,7 @@
+[0416/012258.485:ERROR:devtools_http_handler.cc(770)] Rejected an incoming WebSocket connection from the http://localhost:64667 origin. Use the command line flag --remote-allow-origins=http://localhost:64667 to allow connections from this origin or --remote-allow-origins=* to allow all origins.
+[0416/013303.162:ERROR:cache_util_win.cc(20)] Unable to move the cache: Acceso denegado. (0x5)
+[0416/013303.162:ERROR:cache_util_win.cc(20)] Unable to move the cache: Acceso denegado. (0x5)
+[0416/013303.178:ERROR:disk_cache.cc(208)] Unable to create cache
+[0416/013303.193:ERROR:gpu_disk_cache.cc(708)] Gpu Cache Creation failed: -2
+[0416/013303.193:ERROR:disk_cache.cc(208)] Unable to create cache
+[0416/013303.193:ERROR:gpu_disk_cache.cc(708)] Gpu Cache Creation failed: -2
